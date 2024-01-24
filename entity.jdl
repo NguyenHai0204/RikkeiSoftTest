@@ -1,0 +1,17 @@
+entity Category {
+	categoryId Long
+    categoryName String
+    description String
+}
+
+entity Product {
+	productId Long
+    productName String
+    price BigDecimal
+    stockQuantity Long
+    categoryId Long
+}
+
+paginate Category, Product with pagination
+
+service all with serviceImpl except Category, Product
